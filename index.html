@@ -17,6 +17,7 @@
         </div>
         <div id='left_panel'></div>
         <div id='right_panel'></div>
+        <div id='third_panel'></div>
     </div>
     <script src="js/d3-v5.12.0/d3.min.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -24,15 +25,16 @@
     <script src="js/Scatterplot.js"></script>
     <script src="js/Linking.js"></script>
     <script src="js/Barchart.js"></script>
+    <!-- <script src="js/SecondBarchat.js"></script> -->
+
     <script>
-        // var province;
         d3.csv("static/player.csv", function(d) {
             return d
         }).then(function (data){
             // province = data;
             drawScatterplot(data);
             drawBarChart(data);
-            // drawBarChart(data);
+            drawSecondBarChart(data);
         });
 
     </script>

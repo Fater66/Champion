@@ -17,8 +17,9 @@ body {
     background: white;
     display: grid;
     grid-template-rows: 6% 94%;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "top top""left right";
+    grid-template-columns: 34% 33% 33%;
+    grid-template-areas: "top top top"
+                         "left middle right";
 }
 
 #top_panel {
@@ -47,10 +48,21 @@ body {
     height: 100%;
     /*background: #EBEBEB;*/
     background: white;
+    grid-area: middle;
+    /* box-sizing: border-box; */
+    /* border: solid 1px grey; */
+}
+
+#third_panel {
+    width: 100%;
+    height: 100%;
+    /*background: #EBEBEB;*/
+    background: white;
     grid-area: right;
     /* box-sizing: border-box; */
     /* border: solid 1px grey; */
 }
+
 
 .hidden {
     /*fill-opacity: 0.3;*/
