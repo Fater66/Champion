@@ -71,7 +71,8 @@ function drawScatterplot(data) {
         .enter()
         .append('circle')
         .attr('class', function(d) {
-            return d['country'] + ' point ' + d['name']
+            // point2属性用于与第二个barchart交互
+            return d['country'] + ' point ' + d['name'] + ' point2 ' + d['club']
         })
         .attr('fill', '#B1BDC5')
         .attr('cx', (d, i) => {

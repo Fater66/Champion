@@ -162,6 +162,7 @@ function linkingHover(target, constrain) {
             
     }
     if (target == '.point2') {
+        test= target + constrain
         d3.selectAll(target + constrain)
             .attr('stroke', '#ff6a33')
         let height = parseFloat(d3.select('.rect' + constrain+'.basepart')
@@ -171,7 +172,8 @@ function linkingHover(target, constrain) {
         let width = parseFloat(d3.select('rect' + constrain+'.basepart')
        		.attr('width'))
        	let x = parseFloat(d3.select('rect' + constrain+'.basepart')
-       		.attr('x'))
+               .attr('x'))
+        // 给barchart加轮廓
         d3.select('#barSvg2')
         	.append('path')
         	.attr('stroke', '#ff6a33')
