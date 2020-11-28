@@ -9,27 +9,27 @@ function drawSecondBarChart(data) {
         'bottom': 0.1 * svgHeight
     }
     let svg = div.append('svg')
-        .attr('id', 'barSvg')
+        .attr('id', 'barSvg2')
         .attr('width', svgWidth)
         .attr('height', svgHeight)
         .append('g')
 
-    let x_attr = "country"
+    let x_attr = "club"
     let y_attr = "val"
 
-    x_array = get_array(data, x_attr)
-    y_array = buildData(data, x_attr, x_array, y_attr);
+    x_array2 = get_array(data, x_attr)
+    y_array2 = buildData(data, x_attr, x_array2, y_attr);
 
     let x = d3.scaleBand()
-        .domain(x_array)
+        .domain(x_array2)
         .range([padding.left, svgWidth - padding.right]);
     let axis_x = d3.axisBottom()
         .scale(x)
-        .ticks(x_array.length)
+        .ticks(x_array2.length)
         .tickFormat(d => d);
 
     let y = d3.scaleLinear()
-        .domain([0, d3.max(y_array)])
+        .domain([0, d3.max(y_array2)])
         .range([svgHeight - padding.bottom, padding.top]);
     let axis_y = d3.axisLeft()
         .scale(y)
@@ -72,15 +72,15 @@ function drawSecondBarChart(data) {
 
     svg.append('g')
         .selectAll('rect')
-        .data(y_array)
+        .data(y_array2)
         .enter()
         .append('rect')
         .attr('class', function(d, i) {
-            return x_array[i] + ' rect ' + 'basepart'
+            return x_array2[i] + ' rect ' + 'basepart'
         })
         .classed('active', true)
         .attr('x', function(d, i) {
-            return x(x_array[i]) + x.bandwidth() / 4
+            return x(x_array2[i]) + x.bandwidth() / 4
         })
         .attr('y', function(d, i) {
             return y(d)
@@ -93,7 +93,7 @@ function drawSecondBarChart(data) {
         .on('mouseover', function(d, i) {
             // d3.select(this)
             //     .attr('stroke', '#ff6a33')
-            linkingHover('.point', '.' + x_array[i])
+            linkingHover('.point2', '.' + x_array2[i])
         })
         .on('mouseout', function(d, i) {
             // d3.select(this)
@@ -102,11 +102,11 @@ function drawSecondBarChart(data) {
         })
         .on('click', function(d, i) {
             // if(d3.select(this).classed('active')){
-            // 	d3.selectAll('.rect.'+x_array[i])
+            // 	d3.selectAll('.rect.'+x_array2[i])
             // 		.classed('active', false)
             // 		.classed('hidden', true)
             // } else {
-            // 	d3.selectAll('.rect.'+x_array[i])
+            // 	d3.selectAll('.rect.'+x_array2[i])
             // 		.classed('active', true)
             // 		.classed('hidden', false)
             // }
@@ -116,7 +116,7 @@ function drawSecondBarChart(data) {
             } else {
                 d3.selectAll('.rect.basepart')
                     .classed('active', false)
-                d3.select('.rect.' + x_array[i] +'.basepart')
+                d3.select('.rect.' + x_array2[i] +'.basepart')
                     .classed('active', true)
             }
             linkingSelect('rect')
@@ -124,14 +124,14 @@ function drawSecondBarChart(data) {
 
     svg.append('g')
         .selectAll('rect')
-        .data(y_array)
+        .data(y_array2)
         .enter()
         .append('rect')
         .attr('class', function(d, i) {
-            return x_array[i] + ' rect ' + 'highpart'
+            return x_array2[i] + ' rect ' + 'highpart'
         })
         .attr('x', function(d, i) {
-            return x(x_array[i]) + x.bandwidth() / 4
+            return x(x_array2[i]) + x.bandwidth() / 4
         })
         .attr('y', function(d, i) {
             return y(d)
@@ -143,32 +143,32 @@ function drawSecondBarChart(data) {
         .attr('stroke', 'none')
         // .attr('stroke-width', 1)
         .on('mouseover', function(d, i) {
-            // d3.select('.rect.' + x_array[i] + '.basepart')
+            // d3.select('.rect.' + x_array2[i] + '.basepart')
             //     .attr('stroke', '#ff6a33')
-            linkingHover('.point', '.' + x_array[i])
+            linkingHover('.point2', '.' + x_array2[i])
         })
         .on('mouseout', function(d, i) {
-            // d3.select('.rect.' + x_array[i] + '.basepart')
+            // d3.select('.rect.' + x_array2[i] + '.basepart')
             //     .attr('stroke', 'none')
             Renew();
         })
         .on('click', function(d, i) {
-            // if (d3.select('.rect.' + x_array[i]).classed('active')) {
-            //     d3.selectAll('.rect.' + x_array[i])
+            // if (d3.select('.rect.' + x_array2[i]).classed('active')) {
+            //     d3.selectAll('.rect.' + x_array2[i])
             //         .classed('active', false)
             //         .classed('hidden', true)
             // } else {
-            //     d3.selectAll('.rect.' + x_array[i])
+            //     d3.selectAll('.rect.' + x_array2[i])
             //         .classed('active', true)
             //         .classed('hidden', false)
             // }
-            if (d3.selectAll('.rect.active')._groups[0].length == 1 && d3.select('.rect.'+x_array[i]+'.basepart').classed('active')) {
+            if (d3.selectAll('.rect.active')._groups[0].length == 1 && d3.select('.rect.'+x_array2[i]+'.basepart').classed('active')) {
                 d3.selectAll('.rect.basepart')
                     .classed('active', true)
             } else {
                 d3.selectAll('.basepart')
                     .classed('active', false)
-                d3.select('.' + x_array[i]+'.basepart')
+                d3.select('.' + x_array2[i]+'.basepart')
                     .classed('active', true)
             }
             linkingSelect('rect')
@@ -194,13 +194,13 @@ function get_array(data, attr) {
     return Object.keys(ret);
 }
 
-function buildData(data, x_attr, x_array, y_attr) {
+function buildData(data, x_attr, x_array2, y_attr) {
     let ret = [];
     let temp = 0;
-    for (let i = 0; i < x_array.length; i++) {
+    for (let i = 0; i < x_array2.length; i++) {
         temp = 0;
         data.forEach(d => {
-            if (d[x_attr] == x_array[i]) {
+            if (d[x_attr] == x_array2[i]) {
                 temp += parseFloat(d[y_attr])
             }
         })

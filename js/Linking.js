@@ -161,6 +161,31 @@ function linkingHover(target, constrain) {
             .duration(500)
             
     }
+    if (target == '.point2') {
+        d3.selectAll(target + constrain)
+            .attr('stroke', '#ff6a33')
+        let height = parseFloat(d3.select('.rect' + constrain+'.basepart')
+            .attr('height'))
+        let y = parseFloat(d3.select('rect' + constrain+'.basepart')
+            .attr('y'))
+        let width = parseFloat(d3.select('rect' + constrain+'.basepart')
+       		.attr('width'))
+       	let x = parseFloat(d3.select('rect' + constrain+'.basepart')
+       		.attr('x'))
+        d3.select('#barSvg2')
+        	.append('path')
+        	.attr('stroke', '#ff6a33')
+        	.attr('stroke-width', 2)
+        	.attr('fill', 'none')
+        	.attr('class', 'hoverline')
+        	.attr('d', function(){
+        		return "M"+x+","+y+
+        		"L"+(x+width)+","+y+
+        		"L"+(x+width)+","+(y+height)+
+        		"L"+(x)+","+(y+height)+
+        		"L"+x+","+y
+        	})
+    }
 }
 
 function Renew() {
