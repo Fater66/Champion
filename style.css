@@ -1,0 +1,61 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background: white;
+    display: grid;
+    grid-template-rows: 6% 94%;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "top top""left right";
+}
+
+#top_panel {
+    width: 100%;
+    height: 100%;
+    background: lightblue;
+    grid-area: top;
+}
+
+.text {
+    text-align: center;
+    font: Khand-Regular;
+    padding-top: 0.5rem;
+}
+
+#left_panel {
+    width: 100%;
+    height: 100%;
+    /*background: #EBEBEB;*/
+    background: white;
+    grid-area: left;
+}
+
+#right_panel {
+    width: 100%;
+    height: 100%;
+    /*background: #EBEBEB;*/
+    background: white;
+    grid-area: right;
+    /* box-sizing: border-box; */
+    /* border: solid 1px grey; */
+}
+
+.hidden {
+    /*fill-opacity: 0.3;*/
+}
+
+.active {
+    /*opacity: 1;*/
+}
