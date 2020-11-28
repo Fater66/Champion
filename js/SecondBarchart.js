@@ -14,7 +14,7 @@ function drawSecondBarChart(data) {
         .attr('height', svgHeight)
         .append('g')
 
-    let x_attr = "country"
+    let x_attr = "position"
     let y_attr = "val"
 
     x_array = get_array(data, x_attr)

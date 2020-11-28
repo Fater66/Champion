@@ -14,6 +14,7 @@ function drawScatterplot(data) {
 
     let x_attr = "val"
     let y_attr = "stats"
+    let radius = "age"
 
     let x = d3.scaleLinear()
         .domain(get_min_max(data, x_attr))
@@ -79,7 +80,9 @@ function drawScatterplot(data) {
         .attr('cy', (d, i) => {
             return y(parseFloat(d[y_attr]));
         })
-        .attr('r', 5)
+        .attr('r', (d, i) => {
+            return parseInt(d[radius] /6 );
+        })
         .attr('stroke', 'none')
         .attr('stroke-width', 1.5)
         .attr('opacity', 1)
