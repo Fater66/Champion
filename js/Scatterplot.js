@@ -12,9 +12,9 @@ function drawScatterplot(data) {
         .attr('width', svgWidth)
         .attr('height', svgHeight)
 
-    let x_attr = "val"
-    let y_attr = "stats"
-    let radius = "age"
+    let x_attr = "age"
+    let y_attr = "val"
+    let radius = "stats"
 
     let x = d3.scaleLinear()
         .domain(get_min_max(data, x_attr))

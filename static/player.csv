@@ -1,10 +1,32 @@
-name,country,stats,val,position,age
-梅西,AR,94,110.5,RW,31
-C罗,PT,93,77,CF,33
-内马尔,BR,92,100,FW,25
-姆巴佩,FR,91,200,RW,20
-迪巴拉,AR,88,130,FW,24
-德赫亚,ES,87,80,GK,26
-武磊,CN,99,210,RW,20
-拉莫斯,ES,90,60,CB,32
-博格巴,FR,88,140,MF,27
+name,country,stats,val,position,age,club
+L. Messi,AR,94,110.5,FC,31,FC
+Cristiano Ronaldo,PO,94,77,JU,33,JU
+Neymar Jr,BR,92,118.5,PA,26,PA
+De Gea,SP,91,72,MA,27,MA
+K. De Bruyne,BE,91,102,MA,27,MA
+E. Hazard,BE,91,93,CH,27,CH
+L. Modri,CR,91,67,RE,32,RE
+L. Suarez,UR,91,80,FC,31,FC
+Sergio Ramos,SP,91,51,RE,32,RE
+J. Oblak,SL,90,68,AT,25,AT
+R. Lewandowski,PO,90,77,FC,29,FC
+T. Kroos,GE,90,76.5,RE,28,RE
+D. Godin,UR,90,44,AT,32,AT
+David Silva,SP,90,60,MA,32,MA
+N. Kante,FR,89,63,CH,27,CH
+P. Dybala,AR,89,89,JU,24,JU
+H. Kane,EN,89,83.5,TO,24,TO
+A. Griezmann,FR,89,78,AT,27,AT
+M. ter Stegen,GE,89,58,FC,26,FC
+T. Courtois,BE,89,53.5,RE,26,RE
+Sergio Busquets,SP,89,51.5,FC,29,FC
+E. Cavani,UR,89,60,PA,31,PA
+M. Neuer,GE,89,38,FC,32,FC
+S. Aguero,AR,89,64.5,MA,30,MA
+G. Chiellini,IT,89,27,JU,33,JU
+K. Mbappe,FR,88,81,PA,19,PA
+M. Salah,EG,88,69.5,LI,26,LI
+Casemiro,BR,88,59.5,RE,26,RE
+J. Rodriguez,CO,88,69.5,FC,26,FC
+L. Insigne,IT,88,62,NA,27,NA
+Isco,SP,88,73.5,RE,26,RE
