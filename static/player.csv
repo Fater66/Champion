@@ -1,32 +1,41 @@
-name,country,stats,val,position,age,club
-L. Messi,AR,94,110.5,FC,31,FC
-Cristiano Ronaldo,PO,94,77,JU,33,JU
-Neymar Jr,BR,92,118.5,PA,26,PA
-De Gea,SP,91,72,MA,27,MA
-K. De Bruyne,BE,91,102,MA,27,MA
-E. Hazard,BE,91,93,CH,27,CH
-L. Modri,CR,91,67,RE,32,RE
-L. Suarez,UR,91,80,FC,31,FC
-Sergio Ramos,SP,91,51,RE,32,RE
-J. Oblak,SL,90,68,AT,25,AT
-R. Lewandowski,PO,90,77,FC,29,FC
-T. Kroos,GE,90,76.5,RE,28,RE
-D. Godin,UR,90,44,AT,32,AT
-David Silva,SP,90,60,MA,32,MA
-N. Kante,FR,89,63,CH,27,CH
-P. Dybala,AR,89,89,JU,24,JU
-H. Kane,EN,89,83.5,TO,24,TO
-A. Griezmann,FR,89,78,AT,27,AT
-M. ter Stegen,GE,89,58,FC,26,FC
-T. Courtois,BE,89,53.5,RE,26,RE
-Sergio Busquets,SP,89,51.5,FC,29,FC
-E. Cavani,UR,89,60,PA,31,PA
-M. Neuer,GE,89,38,FC,32,FC
-S. Aguero,AR,89,64.5,MA,30,MA
-G. Chiellini,IT,89,27,JU,33,JU
-K. Mbappe,FR,88,81,PA,19,PA
-M. Salah,EG,88,69.5,LI,26,LI
-Casemiro,BR,88,59.5,RE,26,RE
-J. Rodriguez,CO,88,69.5,FC,26,FC
-L. Insigne,IT,88,62,NA,27,NA
-Isco,SP,88,73.5,RE,26,RE
+name,country,stats,val,position,age,club,color
+L. Messi,AR,94,110.5,RF,31,FC,#FF0000
+Neymar Jr,BR,92,118.5,LW,26,PA,#FF0000
+De Gea,SP,91,72,GK,27,MA,#FFD700
+K. De Bruyne,BE,91,102,RCM,27,MA,#1E90FF
+David Silva,SP,90,60,LCM,32,MA,#1E90FF
+P. Dybala,AR,89,89,LF,24,JU,#FF0000
+A. Griezmann,FR,89,78,CAM,27,AT,#1E90FF
+M. ter Stegen,GE,89,58,GK,26,FC,#FFD700
+T. Courtois,BE,89,53.5,GK,26,RE,#FFD700
+Sergio Busquets,SP,89,51.5,CDM,29,FC,#1E90FF
+S. Aguero,AR,89,64.5,ST,30,MA,#FF0000
+G. Chiellini,IT,89,27,LCB,33,JU,#00FF00
+K. Mbappe,FR,88,81,RM,19,PA,#1E90FF
+Casemiro,BR,88,59.5,CDM,26,RE,#1E90FF
+Isco,SP,88,73.5,LW,26,RE,#FF0000
+Coutinho,BR,88,69.5,LW,26,FC,#FF0000
+Marcelo,BR,88,43,LB,30,RE,#00FF00
+Thiago Silva,BR,88,24,RCB,33,PA,#00FF00
+S. Umtiti,FR,87,57,CB,24,FC,#00FF00
+P. Pogba,FR,87,64,RDM,25,MA,#1E90FF
+R. Lukaku,BE,87,62.5,ST,25,MA,#FF0000
+Jordi Alba,SP,87,38,LB,29,FC,#00FF00
+Pique,SP,87,34,RCB,31,FC,#00FF00
+L. Sane,GE,86,61,LW,22,MA,#FF0000
+Ederson,BR,86,41.5,GK,24,MA,#FFD700
+R. Sterling,EN,86,56.5,RW,23,MA,#FF0000
+Roberto Firmino,BR,86,53,CAM,26,LI,#1E90FF
+R. Varane,FR,86,50,RCB,25,RE,#00FF00
+M. Verratti,IT,86,55,LCM,25,PA,#1E90FF
+Alex Sandro,BR,86,36.5,LB,27,JU,#00FF00
+Douglas Costa,BR,86,46.5,LM,27,JU,#1E90FF
+L. Bonucci,IT,86,30,RCB,31,JU,#00FF00
+Fernandinho,BR,86,18,CDM,33,MA,#1E90FF
+Marco Asensio,SP,85,54,RW,22,RE,#FF0000
+Alisson,BR,85,36.5,GK,25,LI,#FFD700
+Saul,SP,85,50.5,RCM,23,AT,#1E90FF
+Koke,SP,85,45,LM,26,AT,#1E90FF
+N. Otamendi,AR,85,28.5,CB,30,MA,#00FF00
+S. Khedira,GE,85,33,RCM,31,JU,#1E90FF
+Diego Costa,SP,85,38.5,LS,29,AT,#FF0000

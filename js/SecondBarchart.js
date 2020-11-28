@@ -175,7 +175,7 @@ function drawSecondBarChart(data) {
         })
 
     svg.append('rect')
-        .attr('class', 'hoverpart')
+        .attr('class', 'hoverpart2')
         .attr('fill', 'transparent')
         .attr('stroke', '#ff6a33')
         .attr('stroke-width', 2)

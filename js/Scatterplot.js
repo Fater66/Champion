@@ -90,7 +90,7 @@ function drawScatterplot(data) {
         .on('mouseover', function(d) {
             d3.select(this)
                 .attr('stroke', '#ff6a33')
-            linkingHover('.rect', ['.' + d['country'], d['val']]);
+            linkingHover('.rect', ['.' + d['country'], d['val'],'.' + d['club']]);
         })
         .on('mouseout', function(d) {
             d3.select(this)

@@ -133,7 +133,8 @@ function linkingHover(target, constrain) {
         		"L"+(x+width)+","+(y+height)+
         		"L"+(x)+","+(y+height)+
         		"L"+x+","+y
-        	})
+            })
+        
     }
     if (target == '.rect') {
     	let value = parseFloat(d3.select(target + constrain[0])._groups[0][0].__data__)
@@ -160,6 +161,29 @@ function linkingHover(target, constrain) {
             .transition()
             .duration(500)
             
+    	value = parseFloat(d3.select(target + constrain[2])._groups[0][0].__data__)
+        height = parseFloat(d3.select(target + constrain[2])
+            .attr('height'))
+        y = parseFloat(d3.select(target + constrain[2])
+            .attr('y'))
+       	width = parseFloat(d3.select(target + constrain[2])
+       		.attr('width'))
+       	x = parseFloat(d3.select(target + constrain[2])
+       		.attr('x'))
+       	constrain[1] = parseFloat(constrain[1])
+        d3.select('.hoverpart2')
+            .attr('y', function() {
+                return y + (height - height * constrain[1]/ value)
+            })
+            .attr('x', x)
+            .attr('width', width)
+            .attr('height', 0)
+        d3.select('.hoverpart2')
+            .attr('height', function() {
+                return height*constrain[1] / value
+            })
+            .transition()
+            .duration(500)
     }
     if (target == '.point2') {
         test= target + constrain
